@@ -1,0 +1,43 @@
+/* ============================================================
+   VARIABLES & RESET
+   Muzarch Design Studio
+   ============================================================ */
+
+/* Google Fonts are imported in index.html via <link> */
+
+:root {
+  --gold: #c9a84c;
+  --gold-light: #e8c97a;
+  --gold-dark: #8b6914;
+  --black: #050505;
+  --black-2: #0a0a0a;
+  --black-3: #111111;
+  --black-4: #1a1a1a;
+  --warm-gray: #2a2520;
+  --text-primary: #f5f0e8;
+  --text-secondary: #b8afa0;
+  --text-muted: #6b6258;
+  --border: rgba(201, 168, 76, 0.18);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background: var(--black);
+  color: var(--text-primary);
+  font-family: "Outfit", sans-serif;
+  font-weight: 300;
+  overflow-x: hidden;
+  cursor: none;
+}

@@ -1,0 +1,125 @@
+/* ============================================================
+   ANIMATIONS & KEYFRAMES
+   ============================================================ */
+
+/* ── Entry animations ── */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* ── Loader ── */
+@keyframes loaderPulse {
+  0%, 100% { opacity: 0.4; }
+  50%       { opacity: 1; }
+}
+
+@keyframes loaderFill {
+  to { width: 100%; }
+}
+
+/* ── Scroll indicator ── */
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.3; }
+  50%       { opacity: 1; }
+}
+
+/* ── Particle float ── */
+@keyframes particleFloat {
+  0%   { transform: translateY(0) translateX(0) scale(1); opacity: 0; }
+  15%  { opacity: 0.55; }
+  85%  { opacity: 0.25; }
+  100% { transform: translateY(-110px) translateX(var(--dx, 0px)) scale(0.3); opacity: 0; }
+}
+
+/* ── Button shimmer & glow ── */
+@keyframes shimmerSweep {
+  0%   { left: -80%; }
+  100% { left: 130%; }
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow:
+      0 0 18px rgba(201, 168, 76, 0.35),
+      0 4px 20px rgba(201, 168, 76, 0.2);
+  }
+  50% {
+    box-shadow:
+      0 0 38px rgba(232, 201, 122, 0.55),
+      0 6px 32px rgba(201, 168, 76, 0.35);
+  }
+}
+
+@keyframes outlinePulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(201, 168, 76, 0); }
+  50%       { box-shadow: 0 0 0 4px rgba(201, 168, 76, 0.12); }
+}
+
+/* ── Marquee ── */
+@keyframes marqueeScroll {
+  to { transform: translateX(-50%); }
+}
+
+/* ── WhatsApp bounce ── */
+@keyframes waBounce {
+  0%, 90%, 100% { transform: translateY(0); }
+  95%           { transform: translateY(-8px); }
+}
+
+/* ── Reveal on scroll ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+.reveal-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+.reveal-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.92);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+.reveal-scale.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ── Stagger delay helpers ── */
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; }
+.delay-5 { transition-delay: 0.5s; }
+.delay-6 { transition-delay: 0.6s; }
